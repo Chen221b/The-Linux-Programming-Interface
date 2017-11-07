@@ -4,8 +4,13 @@
 
 #define BUF_SIZE 10
 
+/*  
+    argv[1]: output file name
+    argv[2]: input file name
+*/
 int main(int argc, char *argv[])
 {
+    int test = 100;
     int outputFd, inputFd, readNum;
     char buf[BUF_SIZE];
     off_t offset = 10;
@@ -14,7 +19,7 @@ int main(int argc, char *argv[])
     lseek(outputFd, offset, SEEK_CUR);
     while((readNum = read(outputFd, buf, BUF_SIZE)) > 0)
     {
-        write(inputFd, buf, BUF_SIZE);
+        write(inputFd, &test, 1);
     }
     close(inputFd);
     close(outputFd);
