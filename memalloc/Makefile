@@ -1,6 +1,9 @@
 INC = ../INC/*
-free_and_sbrk: free_and_sbrk.o
-	gcc -o free_and_sbrk free_and_sbrk.o
+OBJECT = free_and_sbrk.o error_functions.o get_num.o 
 
-free_and_sbrk.o: free_and_sbrk.c $(INC)
-	gcc -c free_and_sbrk.c
+free_and_sbrk: $(OBJECT)
+	gcc -o free_and_sbrk free_and_sbrk.o error_functions.o get_num.o 
+
+include ../INC/Makefile
+
+free_and_sbrk.o: $(INC)
