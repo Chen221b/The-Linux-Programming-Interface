@@ -1,9 +1,13 @@
+include ../Makefile.inc
 INC = ../INC/*
-OBJECT = free_and_sbrk.o error_functions.o get_num.o 
+OBJECT = $(INC_PATH)error_functions.o $(INC_PATH)get_num.o
+TARGET = free_and_sbrk
+TAR_OBJ = free_and_sbrk.o
 
-free_and_sbrk: $(OBJECT)
-	gcc -o free_and_sbrk free_and_sbrk.o error_functions.o get_num.o 
+$(TARGET): $(OBJECT)
+	@echo $(OBJECT)
+	gcc -o $(TARGET) $(TAR_OBJ) $(OBJECT)
 
-include ../INC/Makefile
+# include ../INC/Makefile
 
-free_and_sbrk.o: $(INC)
+$(TAR_OBJ): $(INC)
