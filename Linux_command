@@ -1,1 +1,15 @@
-strace: trace system call and singal
+strace - trace system call and singal
+df - report file system disk space usage
+system() - execute a shell command
+ps aux - to see every process on the system using BSD syntax
+strtol() - convert a string to a long integer
+echo $$ - display PID of shell
+echo $ - display environment variable
+kill() - send a signal to a process
+objdump - display information from object files
+nm - list symbols from object files
+readelf - Displays information about ELF files
+strchr, strrchr, strchrnul - locate character in string
+ldd - print shared object dependencies
+dmesg - print or control the kernel ring buffer
+which - locate a command
