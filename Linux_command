@@ -13,3 +13,5 @@ strchr, strrchr, strchrnul - locate character in string
 ldd - print shared object dependencies
 dmesg - print or control the kernel ring buffer
 which - locate a command
+fgetc, fgets, getc, getchar, ungetc - input of characters and strings
+sizeof - return keyword's amount of storage in bytes, define in stddef.h
